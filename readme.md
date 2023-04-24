@@ -2,6 +2,14 @@
 
 This project is a simple weather forecast app that displays the current weather information for a user-entered location. It uses the [WeatherAPI](https://www.weatherapi.com/) to retrieve the weather data.
 
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+
 ## Features
 
 - Search box to enter a location
