@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(85, 85, 221);
+}
+
+.container {
+  position: relative;
+  width: 400px;
+  height: auto;
+  max-height: 500px;
+  background-color: #fff;
+  padding: 28px 32px;
+  overflow: hidden;
+  border-radius: 18px;
+  transition: 0.6s ease-out;
+}
+
+.search-box {
+  width: 100%;
+  height: min-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search-box input {
+  color: rgb(85, 85, 221);
+  width: 80%;
+  font-size: 24px;
+  font-weight: 500px;
+  text-transform: uppercase;
+  padding-left: 32px;
+  border: 1px solid rgb(85, 85, 221);
+  border-radius: 20px;
+  margin: 10px;
+}
+
+.search-box input::placeholder {
+  font-size: 20px;
+  font-weight: 500;
+  color: rgb(85, 85, 221);
+  text-transform: capitalize;
+}
+
+.search-box button {
+  cursor: pointer;
+  width: 55px;
+  height: 50px;
+  color: rgb(85, 85, 221);
+  background-color: transparent;
+  border-radius: 50%;
+  font-size: 22px;
+  transition: 0.4s ease-in;
+}
+
+.search-box button:hover {
+  color: rgb(31, 31, 91);
+  background-color: #eee;
+}
+
+.search-box i {
+  color: rgb(85, 85, 221);
+  font-size: 28px;
+}
+
+.search-box i:hover {
+  color: rgb(31, 31, 91);
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.weather-box {
+  text-align: center;
+}
+
+.location-box {
+  text-align: center;
+  font-size: 22px;
+}
+
+.location-box .time {
+  font-size: 19px;
+}
+
+.weather-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.weather-main i {
+  color: rgb(85, 85, 221);
+  margin: 10px;
+  font-size: 26px;
+}
+
+.weather-main p {
+  font-size: 25px;
+}
+
+.weather-main .image-pressure {
+  width: 26px;
+  margin: 10px;
+}
+
+.weather-img-box img {
+  width: 50%;
+  cursor: pointer;
+  transition: 0.4s ease-in;
+}
+
+.weather-details i {
+  color: rgb(85, 85, 221);
+}
+
+.weather-details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.weather-details i {
+  color: rgb(85, 85, 221);
+  margin: 10px;
+  font-size: 26px;
+}
+
+.fadeIn {
+  animation: 0.5s fadeIn forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeIn {
+  to {
+    scale: 1;
+    opacity: 1;
+  }
+}

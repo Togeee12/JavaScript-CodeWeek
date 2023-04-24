@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Style -->
+    <link rel="stylesheet" href="./style.css" />
+    <title>Weather Forecast | by Togeee12</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="search-box">
+        <i class="fas fa-location-dot"></i>
+        <input type="text" placeholder="Enter your location" />
+        <button class="fas fa-magnifying-glass"></button>
+      </div>
+      <div class="weather-box">
+        <div class="location-box">
+          <p class="user-location"></p>
+          <p title="Current local time" class="time"></p>
+        </div>
+        <div class="weather-main">
+          <i class="fas fa-temperature-quarter"></i>
+          <p title="Temperature" class="temp-c"></p>
+          <i class="fas fa-water"></i>
+          <p title="Humidity" class="humidity"></p>
+
+          <!-- TODO: ICON TO CHANGEs -->
+          <img class="image-pressure" src="./pressure.svg" />
+          <p title="Pressure" class="pressure"></p>
+        </div>
+
+        <div class="weather-img-box">
+          <img src="" />
+        </div>
+        <div class="weather-details">
+          <i class="fas fa-compass"></i>
+          <p title="Wind directory" class="wind-directory"></p>
+          <i class="fas fa-wind"></i>
+          <p title="Wind speed" class="wind-speed"></p>
+
+          <p class="weather-super-add"></p>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/c7f642db95.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
