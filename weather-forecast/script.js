@@ -41,15 +41,20 @@ const search = document.querySelector(".search-box button");
 const weatherBox = document.querySelector(".weather-box");
 weatherBox.classList.remove(".fadeIn");
 weatherBox.style.display = "none";
-search.addEventListener("click", () => {
+search.addEventListener("click", getDataFromInput);
+document.querySelector(".search-box input").addEventListener("keypress", (e) => {
+  if (e.code === "Enter") getDataFromInput();
+});
+
+function getDataFromInput() {
   const city = document.querySelector(".search-box input").value;
   if (city === " ") return;
-
+  
   weatherBox.style.display = "block";
   const weatherApi = {
     getData: function (location) {
       // ! Insert your key here.
-      let key = ``;
+      let key = `3ebc76840b7e45bc94b204259232304&q`;
       // Fetching data form API
       fetch(
         `http://api.weatherapi.com/v1/current.json?key=${key}=${location}&aqi=no`
@@ -88,4 +93,4 @@ search.addEventListener("click", () => {
 
   // retrieve data form user typed location
   weatherApi.getData(city);
-});
+};
