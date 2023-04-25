@@ -9,9 +9,8 @@ To get started with JavaScript-CodeWeek, follow these steps:
 1. Clone the project repository to your local machine
 2. Open the project in your code editor of choice
 3. Navigate to the `project` directory and open one of the challenges in your code editor
-4. Read the instructions for the challenge and attempt to solve it using your JavaScript skills
-5. Once you have completed the challenge, test your solution by running the provided tests in the `tests` directory
-6. If your solution passes all tests, move on to the next challenge
+4. Read about the project and attempt to recreate it using your JavaScript skills
+5. If your solution passes all tests, move on to the another project
 
 ## Contributing
 
