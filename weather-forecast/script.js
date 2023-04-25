@@ -54,7 +54,7 @@ function getDataFromInput() {
   const weatherApi = {
     getData: function (location) {
       // ! Insert your key here.
-      let key = `3ebc76840b7e45bc94b204259232304&q`;
+      let key = ``;
       // Fetching data form API
       fetch(
         `http://api.weatherapi.com/v1/current.json?key=${key}=${location}&aqi=no`
