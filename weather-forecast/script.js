@@ -41,15 +41,10 @@ const search = document.querySelector(".search-box button");
 const weatherBox = document.querySelector(".weather-box");
 weatherBox.classList.remove(".fadeIn");
 weatherBox.style.display = "none";
-search.addEventListener("click", getDataFromInput);
-document.querySelector(".search-box input").addEventListener("keypress", (e) => {
-  if (e.code === "Enter") getDataFromInput();
-});
-
-function getDataFromInput() {
+search.addEventListener("click", () => {
   const city = document.querySelector(".search-box input").value;
   if (city === " ") return;
-  
+
   weatherBox.style.display = "block";
   const weatherApi = {
     getData: function (location) {
@@ -93,4 +88,4 @@ function getDataFromInput() {
 
   // retrieve data form user typed location
   weatherApi.getData(city);
-};
+});
