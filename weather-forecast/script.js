@@ -1,42 +1,41 @@
 // TODO Commented code is a part of auto localization future which is not finished. It is using build in browser localization API as well as google API to translate latitude, longitude to city name. Please feel free to contribute.
-if (navigator.geolocation) {
-  console.log("Navigator supported");
-} else {
-  console.log("Navigator not supported");
-  alert("Geolocation is not supported. Please try from different device.");
-}
+// if (navigator.geolocation) {
+//   console.log("Navigator supported");
+// } else {
+//   console.log("Navigator not supported");
+//   alert("Geolocation is not supported. Please try from different device.");
+// }
 
-document.querySelector(".search-box i").addEventListener("click", () => {
-  // Get geolocation
-  navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
-});
+// document.querySelector(".search-box i").addEventListener("click", () => {
+//   // Get geolocation
+//   navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+// });
 
-// Getting correct geolocation
-function successCallback(position, weatherApi) {
-  const latitude = position.coords.latitude;
-  const longitude = position.coords.longitude;
-  const userLocation = `${latitude}/${longitude}`;
+// // Getting correct geolocation
+// function successCallback(position, weatherApi) {
+//   const latitude = position.coords.latitude;
+//   const longitude = position.coords.longitude;
+//   const userLocation = `${latitude}/${longitude}`;
 
-  // Calculating city name by using google maps API
-  const url = `https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${latitude}&lon=${longitude}`;
+//   // Calculating city name by using google maps API
+//   const url = `https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${latitude}&lon=${longitude}`;
 
-  fetch(url)
-    .then((response) => response.json())
-    .then((data) => {
-      const city = data.address.city;
-      document.querySelector(".search-box input").value = city;
-      console.log(`City name: ${city}`);
-    })
-    .catch((error) => {
-      console.error(`Error fetching city name: ${error}`);
-    });
+//   fetch(url)
+//     .then((response) => response.json())
+//     .then((data) => {
+//       const city = data.address.city;
+//       console.log(`City name: ${city}`);
+//     })
+//     .catch((error) => {
+//       console.error(`Error fetching city name: ${error}`);
+//     });
 
-  console.log(userLocation);
-}
-// Error
-function errorCallback(error) {
-  console.error(`Error retrieving location: ${error.message}`);
-}
+//   console.log(userLocation);
+// }
+// // Error
+// function errorCallback(error) {
+//   console.error(`Error retrieving location: ${error.message}`);
+// }
 
 const search = document.querySelector(".search-box button");
 const weatherBox = document.querySelector(".weather-box");
@@ -50,10 +49,10 @@ search.addEventListener("click", () => {
   const weatherApi = {
     getData: function (location) {
       // ! Insert your key here.
-      let key = `db9a821982704ec1990161208231005`;
+      let key = ``;
       // Fetching data form API
       fetch(
-        `http://api.weatherapi.com/v1/current.json?key=${key}&q=${location}&aqi=no`
+        `http://api.weatherapi.com/v1/current.json?key=${key}=${location}&aqi=no`
       )
         .then((response) => response.json())
         .then((data) => {
